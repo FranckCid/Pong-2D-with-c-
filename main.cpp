@@ -185,12 +185,12 @@ void Logic(){
         if(ball.x<10){
             score1++;
 
-            sprintf(s_score,"%ld", score1);
+            sprintf(s_score,"%d", score1);
             t_score2 = TTF_RenderText_Shaded(font, s_score, c_white, c_black);
         }else if(ball.x > SCREEN_W - ball.w -10){
             score2++;
             char s_score2[10];
-            sprintf(s_score,"%ld", score1);
+            sprintf(s_score,"%d", score1);
             t_score1 = TTF_RenderText_Shaded(font, s_score, c_white, c_black);
         }
         reset_ball();

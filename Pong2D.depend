@@ -8,3 +8,12 @@
 	<SDL/SDL.h>
 	<SDL/SDL_ttf.h>
 
+1460907066 source:/home/franck/Documentos/Git/Pong-2D-with-c-/main.cpp
+	<cstdlib>
+	<stdlib.h>
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+
