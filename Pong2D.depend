@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1460900967 source:/home/franck/Documentos/C and Cpp/Pong2D/main.cpp
+	<cstdlib>
+	<stdlib.h>
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+
