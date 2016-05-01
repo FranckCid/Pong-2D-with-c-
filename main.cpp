@@ -47,7 +47,9 @@ void AI(){
 
     unsigned int _top = Game::SCREEN_H - Game::PADDLE_HEIGHT - 5;
 
-    aiPaddle.rect.y += ball.diry * 10;
+    aiPaddle.rect.y += (ball.rect.y - aiPaddle.rect.y);
+
+    std::cout << (ball.rect.y - aiPaddle.rect.y) << "\n";
 
     if(aiPaddle.rect.y >= Game::SCREEN_H - Game::PADDLE_HEIGHT - 10){
         aiPaddle.rect.y = Game::SCREEN_H - Game::PADDLE_HEIGHT - 11;
