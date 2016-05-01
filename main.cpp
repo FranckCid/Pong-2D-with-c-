@@ -38,8 +38,9 @@ void CollisionCheck(){
     if(ball.Intersects(pPaddle.rect) ||
        ball.Intersects(aiPaddle.rect)){
         ball.dirx *= -1;
-        ball.rect.x += 2*ball.dirx;
+        ball.rect.x += 16*ball.dirx;
     }
+    pPaddle.rect.h = Game::PADDLE_HEIGHT;
     aiPaddle.rect.h = Game::PADDLE_HEIGHT;
 }
 
@@ -96,6 +97,12 @@ void Logic(){
         pPaddle.rect.y += 10;
     }
 
+    if(pPaddle.rect.y >= Game::SCREEN_H - Game::PADDLE_HEIGHT - 10){
+        pPaddle.rect.y = Game::SCREEN_H - Game::PADDLE_HEIGHT - 11;
+    }else if(pPaddle.rect.y <= 10){
+        pPaddle.rect.y = 11;
+    }
+
     if(ball.rect.y < 10 || ball.rect.y > Game::SCREEN_H - ball.rect.h - 10){
         ball.diry *= -1;
     }
@@ -121,14 +128,13 @@ void DrawScreen(){
 
     SDL_FillRect(screen, NULL, 0);
 
+    for(int i=0; i<interface.texts.size(); i++){
+        SDL_BlitSurface(interface.texts[i], NULL, screen, &interface.r_texts[i]);
+    }
 
     SDL_FillRect(screen, &pPaddle.rect, white);
     SDL_FillRect(screen, &aiPaddle.rect, white);
     SDL_FillRect(screen, &ball.rect, white);
-
-    for(int i=0; i<interface.texts.size(); i++){
-        SDL_BlitSurface(interface.texts[i], NULL, screen, &interface.r_texts[i]);
-    }
 
     SDL_Flip(screen);
 

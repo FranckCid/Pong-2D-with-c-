@@ -18,12 +18,12 @@ void Interface::NewText(int rx, int ry, char* t, SDL_Color c){
 }
 
 void Interface::UpdateText(int i, char* nt, SDL_Color c){
-    texts[i] = TTF_RenderText_Shaded(font, nt, c, {0,0,0.0});
+    texts[i] = TTF_RenderText_Shaded(font, nt, c, {255,0,0.0});
 }
 
 void Interface::UpdateText(int i, int nt, SDL_Color c){
     char newtext[65];
     sprintf(newtext,"%d", nt);
-    texts[i] = TTF_RenderText_Shaded(font, newtext, c, {0,0,0,0});
+    texts[i] = TTF_RenderText_Shaded(font, newtext, c, {255,0,0,0});
 }
 
