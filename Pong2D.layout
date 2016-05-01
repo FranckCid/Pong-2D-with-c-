@@ -2,21 +2,10 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2176" topLine="49" />
+			<Cursor1 position="3198" topLine="234" />
 		</Cursor>
-		<Folding>
-			<Collapse line="46" />
-			<Collapse line="64" />
-			<Collapse line="74" />
-			<Collapse line="92" />
-			<Collapse line="110" />
-			<Collapse line="129" />
-			<Collapse line="169" />
-			<Collapse line="205" />
-			<Collapse line="222" />
-		</Folding>
 	</File>
-	<EditorTabsLayout layout="05d4b59057138b0b03de305800000003=*0;Pong2D:main.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=180;besth=180;minw=180;minh=180;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=05d4b59057138b0b03de305800000003;caption=;state=2098172;dir=5;layer=0;row=1;pos=0;prop=100000;bestw=549;besth=228;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,1)=551|" />
+	<EditorTabsLayout layout="@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=549;besth=228;minw=549;minh=228;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|" />
 </CodeBlocks_layout_file>
