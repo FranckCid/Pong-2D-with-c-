@@ -7,6 +7,8 @@
 Ball::Ball(){
     rect.h = 20;
     rect.w = 20;
+    dirx = 1;
+    diry = 1;
 }
 
 void Ball::ResetBall(){

@@ -8,7 +8,7 @@
 	<SDL/SDL.h>
 	<SDL/SDL_ttf.h>
 
-1462121525 source:/home/franck/Documentos/Git/Pong-2D-with-c-/main.cpp
+1462122085 source:/home/franck/Documentos/Git/Pong-2D-with-c-/main.cpp
 	<cstdlib>
 	<stdlib.h>
 	"Game.h"
@@ -21,7 +21,7 @@
 	<SDL/SDL.h>
 	<SDL/SDL_ttf.h>
 
-1462117380 source:/home/franck/Documentos/Git/Pong-2D-with-c-/src/GameObject.cpp
+1462122063 source:/home/franck/Documentos/Git/Pong-2D-with-c-/src/GameObject.cpp
 	"GameObject.h"
 	"SDL/SDL.h"
 
@@ -44,7 +44,7 @@
 1462117999 /home/franck/Documentos/Git/Pong-2D-with-c-/include/Ball.h
 	"GameObject.h"
 
-1462118295 source:/home/franck/Documentos/Git/Pong-2D-with-c-/src/Ball.cpp
+1462121735 source:/home/franck/Documentos/Git/Pong-2D-with-c-/src/Ball.cpp
 	"Game.h"
 	"Ball.h"
 	"GameObject.h"
@@ -55,8 +55,9 @@
 	<SDL/SDL.h>
 	<SDL/SDL_ttf.h>
 
-1462120688 source:/home/franck/Documentos/Git/Pong-2D-with-c-/src/Interface.cpp
+1462122127 source:/home/franck/Documentos/Git/Pong-2D-with-c-/src/Interface.cpp
 	"Interface.h"
+	<iostream>
 	<SDL/SDL.h>
 	<SDL/SDL_ttf.h>
 

@@ -32,63 +32,27 @@ Paddle pPaddle;
 Paddle aiPaddle;
 Ball ball;
 
-unsigned int direction_x = 1, direction_y = 1;
-
-//Counters
-bool shouldCheck = true;
-unsigned int checkColAgain = 0;
-const unsigned int limitToCheck = 100;
-
-//Game objects
-class Bound{
-    public:
-        int posx, posy, width, height, left, right, top, bottom;
-        Bound(int x, int y, int w, int h){
-            posx = x;
-            posy = y;
-            width = w;
-            height = y;
-
-            left = x;
-            right = x + w;
-            top = y;
-            bottom = y + h;
-        }
-};
-
 //Logic methods
 
 void CollisionCheck(){
-    if(shouldCheck){
-        if(pPaddle.Intersects(ball.rect) ||
-           aiPaddle.Intersects(ball.rect)){
-            direction_x *= -1;
-            shouldCheck = false;
-        }
-        aiPaddle.rect.h = Game::PADDLE_HEIGHT;
-    }else{
-        checkColAgain++;
-        if(checkColAgain > limitToCheck){
-                checkColAgain = 0;
-                shouldCheck = true;
-        }
+    if(ball.Intersects(pPaddle.rect) ||
+       ball.Intersects(aiPaddle.rect)){
+        ball.dirx *= -1;
+        ball.rect.x += 2*ball.dirx;
     }
+    aiPaddle.rect.h = Game::PADDLE_HEIGHT;
 }
 
 void AI(){
 
     unsigned int _top = Game::SCREEN_H - Game::PADDLE_HEIGHT - 5;
 
-    if(aiPaddle.rect.y >= 5){
-        aiPaddle.rect.y += direction_y;
-    }else if(aiPaddle.rect.y <= _top){
-        aiPaddle.rect.y -= direction_y;
-    }
+    aiPaddle.rect.y += ball.diry * 10;
 
-    if(aiPaddle.rect.y < 5){
-       aiPaddle.rect.y = 5;
-    }else if(aiPaddle.rect.y > _top){
-        aiPaddle.rect.y = _top;
+    if(aiPaddle.rect.y >= Game::SCREEN_H - Game::PADDLE_HEIGHT - 10){
+        aiPaddle.rect.y = Game::SCREEN_H - Game::PADDLE_HEIGHT - 11;
+    }else if(aiPaddle.rect.y <= 10){
+        aiPaddle.rect.y = 11;
     }
 
 }
@@ -131,10 +95,9 @@ void Logic(){
     }
 
     if(ball.rect.y < 10 || ball.rect.y > Game::SCREEN_H - ball.rect.h - 10){
-        direction_y *= -1;
+        ball.diry *= -1;
     }
     if(ball.rect.x < 10 || ball.rect.x > Game::SCREEN_W - ball.rect.w -10){
-        char s_score[10];
         if(ball.rect.x<10){
             Game::score1++;
             interface.UpdateText(0, Game::score1, c_white);
@@ -147,8 +110,8 @@ void Logic(){
 
 
 
-    ball.rect.x += direction_x*5;
-    ball.rect.y += direction_y*5;
+    ball.rect.x += ball.dirx*5;
+    ball.rect.y += ball.diry*5;
 
 }
 

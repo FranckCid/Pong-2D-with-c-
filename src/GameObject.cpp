@@ -14,7 +14,7 @@ bool GameObject::Intersects(int x, int y, int w, int h){
 }
 
 bool GameObject::Intersects(SDL_Rect r){
-    if(rect.x >= r.x && rect.y >= r.y && rect.x <= r.h+r.w && rect.y <= r.y+r.h){
+    if(rect.x >= r.x && rect.y >= r.y && rect.x <= r.x+r.w && rect.y <= r.y+r.h){
         return true;
     }
     return false;
